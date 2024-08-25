@@ -1,0 +1,19 @@
+.main{
+    margin-top: 96px;
+    #home{
+        width: 100%;
+        height: calc(100vh - 96px);
+        padding: 30px 20px;
+
+        #welcome__User{
+            text-wrap: nowrap;
+            font-size: 2rem;
+            font-weight: 500;
+            
+            #userName{
+                font-weight: 500;
+                color: var(--main);
+            }
+        }
+    }
+}

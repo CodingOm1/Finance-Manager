@@ -1,0 +1,17 @@
+.__navbar{
+    width: 100%;
+    padding: 0.50rem 6rem;
+    background-color: var(--main);
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 15px 15px 60px var(--main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    
+    h2{
+        font-weight: 500;
+    }
+}
