@@ -1,5 +1,6 @@
 .main{
     margin-top: 96px;
+    margin-bottom: 96px;
     #home{
         width: 100%;
         height: calc(100vh - 96px);
@@ -15,5 +16,7 @@
                 color: var(--main);
             }
         }
+
+   
     }
 }

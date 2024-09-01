@@ -1,0 +1,338 @@
+/* Main container for the MainPage */
+.main-page {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+      
+    .flex {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+  
+      .main-page__header {
+        width: 100%;
+  
+        h1 {
+          font-size: 24px;
+          margin-bottom: 20px;
+          color: #333;
+        }
+  
+        .main-page__summary {
+          display: flex;
+          justify-content: space-between;
+  
+          .summary__item {
+            flex: 1;
+            margin-right: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
+            text-align: center;
+  
+            h2 {
+              font-size: 18px;
+              margin-bottom: 10px;
+              color: #555;
+            }
+  
+            p {
+              font-size: 24px;
+              font-weight: bold;
+              color: #333;
+            }
+  
+            input {
+              width: calc(100% - 22px);
+              padding: 10px;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              margin-top: 10px;
+              font-size: 16px;
+              box-sizing: border-box;
+            }
+  
+            button {
+              background-color: #007bff;
+              color: #fff;
+              border: none;
+              padding: 10px;
+              border-radius: 5px;
+              cursor: pointer;
+              margin-top: 10px;
+              width: 100%;
+              font-size: 16px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              box-sizing: border-box;
+  
+              &:hover {
+                background-color: #0056b3;
+              }
+  
+              .icon {
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+      }
+  
+      .main-page__chart {
+        width: 60%;
+      }
+    }
+  
+
+    &__budget{
+        margin-top: 20px;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        gap: 10px;
+
+        input{
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #333;
+            outline: none;
+            padding: 5px ;
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+      
+        h2 {
+          font-size: 20px;
+          margin-bottom: 15px;
+          color: #333;
+        }
+      
+        button{
+            width: 200px;
+            height: 30px;
+            outline: none;
+            border: none;
+            color: #fff;
+            background-color: #28a745;
+            margin-left: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+      /* Financial Goals Section */
+      &__goals {
+        margin-top: 20px;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        gap: 10px;
+        input{
+            width: 200px;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #333;
+            outline: none;
+            padding: 5px ;
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+      
+        h2 {
+          font-size: 20px;
+          margin-bottom: 15px;
+          color: #333;
+        }
+      
+        button{
+            width: 200px;
+            height: 30px;
+            outline: none;
+            border: none;
+            color: #fff;
+            background-color: #28a745;
+            margin-left: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .goal {
+          margin-bottom: 15px;
+          padding: 15px;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          background-color: #f9f9f9;
+      
+          span {
+            display: block;
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+          }
+      
+          .goal__progress {
+            background-color: #e9ecef;
+            border-radius: 5px;
+            height: 10px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 5px;
+      
+            .goal__progress-bar {
+              background-color: #28a745;
+              height: 100%;
+              transition: width 0.3s ease;
+            }
+          }
+        }
+    }
+    .main-page__budget,
+    .main-page__goals,
+    .main-page__transactions {
+      margin-top: 20px;
+  
+      h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #333;
+      }
+  
+      .budget__categories {
+        .category {
+          display: flex;
+          justify-content: space-between;
+          padding: 10px;
+          border-bottom: 1px solid #ddd;
+          background-color: #fff;
+        }
+      }
+  
+      .goal {
+        margin-bottom: 15px;
+  
+        .goal__progress {
+          background-color: #f3f3f3;
+          border-radius: 5px;
+          height: 10px;
+          position: relative;
+          overflow: hidden;
+          margin-bottom: 5px;
+  
+          .goal__progress-bar {
+            background-color: #28a745;
+            height: 100%;
+            transition: width 0.3s ease;
+          }
+        }
+      }
+  
+      .transactions__table {
+        width: 100%;
+        border-collapse: collapse;
+  
+        th, td {
+          padding: 10px;
+          border: 1px solid #ddd;
+          text-align: left;
+          background-color: #fff;
+        }
+  
+        th {
+          background-color: #f8f9fa;
+        }
+  
+        tbody {
+          tr:nth-child(even) {
+            background-color: #f2f2f2;
+          }
+        }
+      }
+  
+      .add-transaction {
+        margin-top: 20px;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #fff;
+  
+        h3 {
+          margin-bottom: 15px;
+          font-size: 18px;
+          color: #333;
+        }
+  
+        input {
+          width: calc(100% - 22px);
+          padding: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin-bottom: 10px;
+          font-size: 16px;
+          box-sizing: border-box;
+        }
+  
+        button {
+          background-color: #28a745;
+          color: #fff;
+          border: none;
+          padding: 10px;
+          border-radius: 5px;
+          cursor: pointer;
+          width: 100%;
+          font-size: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
+  
+          &:hover {
+            background-color: #218838;
+          }
+  
+          .icon {
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+  
+  /* SCSS for Financial Goals and Budget Overview */
+
+/* Budget Overview Section */
+.main-page__budget {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  
+    h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+  
+    .budget__categories {
+      .category {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        background-color: #f9f9f9;
+  
+        &:last-child {
+          border-bottom: none; /* Remove border from the last item */
+        }
+  
+        span {
+          font-size: 16px;
+          color: #555;
+        }
+      }
+    }
+  }
+  

@@ -1,13 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Home.scss';
 import Navbar from '../../components/Navbar/Navbar';
+import FinanceChart from '../../components/Chart/FinanceChart'; // Import the chart component
+import MainPage from '../../components/MainPage/MainPage';
 
 const Home = () => {
-  const [userName, setUserName] = useState("");
+  const [userName, setUserName] = useState("User");
+
 
   useEffect(() => {
-    const storedName = localStorage.getItem("userName");
-    setUserName(storedName || "User");
+    try {
+      const storedName = localStorage.getItem("userName");
+      setUserName(storedName || "User");
+    } catch (error) {
+      console.error("Failed to retrieve user name from localStorage:", error);
+      setUserName("User");
+    }
+
   }, []);
 
   return (
@@ -15,11 +24,11 @@ const Home = () => {
       <Navbar />
       <div className="main">
         <section id='home'>
-          <h1 id='welcome__User'>Hi <span id='userName'>{userName}</span>,<br />See your Finance</h1>
+          <MainPage />
         </section>
       </div>
     </div>
   );
-}
+};
 
 export default Home;
